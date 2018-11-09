@@ -6,6 +6,7 @@
       <li><router-link to="/mock">mock</router-link></li>
       <li><router-link to="/goods">goods</router-link></li>
       <li><router-link to="/product">product</router-link></li>
+       <li><router-link to="/todolist">todoList</router-link></li>
     </ul>
     <!-- <demo></demo> -->
     <router-view/>
@@ -24,6 +25,6 @@
   ul,li,ol{list-style: none;}
   a{text-decoration: none;}
   #app{width: 800px;overflow: hidden;margin:0 auto;}
-  .nav{width:100%;}
-  .nav li{float: left;width: 160px;height:30px;line-height:30px;text-align: center;}
+  .nav{width:100%;height:30px;line-height: 30px;}
+  .nav li{float: left;width: 130px;height:30px;line-height:30px;text-align: center;}
 </style>

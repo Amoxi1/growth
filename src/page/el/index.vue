@@ -48,7 +48,7 @@
         },
         methods:{
             submitData(){
-                console.log(this.fruit)
+                //console.log(this.fruit)
             },
             showSex(val){
                 if(val === "red"){

@@ -26,5 +26,8 @@ export default new VueRouter({
     },{
         path:'/product',
         component:()=>import('./page/product/productList.vue')
+    },{
+        path:'/todolist',
+        component:()=>import('./page/todolist/index.vue')
     }
 ]})

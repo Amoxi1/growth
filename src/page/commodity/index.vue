@@ -44,8 +44,8 @@ import axios from 'axios'
         watch:{
             goodsList:{
                 handler:function(value,oldValue){
-                    console.log(value)
-                    console.log(oldValue)
+                    //console.log(value)
+                    //console.log(oldValue)
                     let sumPrice=0;
                     let sumNum=0;
                     let singlePrice=0;
@@ -98,7 +98,7 @@ import axios from 'axios'
         
     }
 </script>
-<style  lang="scss" >
+<style  lang="scss" scoped>
 .shop{
     width:100%;
     height: 300px;

@@ -1,5 +1,6 @@
 <template>
     <div>
+        
     {{person.name}}
 
     {{isShow?person.age:'保密'}}
@@ -25,15 +26,15 @@ export default {
     methods:{
         getName(){
           axios.get('/getName').then((res)=>{
-              console.log(res)
+              //console.log(res)
               this.person.name = res.data.name
           }).then(()=>{
               axios.get('/getSex').then((res)=>{
-                  console.log(res)
+                //  console.log(res)
                   return res.data
               }).then((r)=>{
                   axios.get('/getAge').then((res)=>{
-                      if(val==='woman'){
+                      if(r==='woman'){
                           this.isShow = false
                       }else{
                           this.person.age = res.data.age

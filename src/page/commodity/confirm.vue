@@ -14,8 +14,8 @@
             }
         },
       mounted(){
-          console.log(this.$router)
-          console.log(this.$route)
+          //console.log(this.$router)
+          //console.log(this.$route)
             this.totalPrice=this.$route.params.totalPrice
             this.totalCount=this.$route.params.totalCount
 

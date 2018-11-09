@@ -94,10 +94,10 @@
             handleClick(row) {
                 this.dialogVisible = true
                 this.currentData = row
-                console.log(this.currentData)
+                //console.log(this.currentData)
             },
             editGoods(row){
-                console.log(row)
+                //console.log(row)
                 this.editGoodsDialogVisible = true
                 this.currentData = row
             }

@@ -75,15 +75,15 @@
                     this.isAgeShow = !this.isAgeShow
                 },
             upsertFriendName(idx) {
-                console.log(this.friends[idx])
+                //console.log(this.friends[idx])
                    this.$set(this.friends,idx,{"name":"kkk","age":19})
-                console.log('idx',this.friends)
+                //console.log('idx',this.friends)
             },
             upsertFriend(boy){
                 
                 this.friends.push(boy)
                 this.boyFriendValue={}
-                console.log(boy)
+                //console.log(boy)
             }
 
         }
