@@ -11,7 +11,7 @@
             </li>
         </ul>
         <div class="count">
-            全选：<input class="select_all" type="checkbox" @click="selectAll"/>
+            全选：<input class="select_all" type="checkbox" @click="selectAll" v-model="selectAllGoods"/>
             总价：<span>{{totalPrice}}</span>
             <router-link :to="'/confirm/'+totalPrice+'/'+totalCount">
                 <button>
@@ -30,7 +30,8 @@ import axios from 'axios'
             return{
                 goodsList:{},
                 totalPrice:undefined,
-                totalCount:0
+                totalCount:0,
+                selectAllGoods:false
             }
         },
         filters:{
@@ -68,8 +69,7 @@ import axios from 'axios'
                 axios.get('/getCommodity').then((res)=>{
                     var response = res.data
                     this.goodsList = response
-                    //console.log(this.goodsList)
-                    return response
+                    
                 })
             },
             clickReduce(idx){
@@ -86,11 +86,18 @@ import axios from 'axios'
                 this.goodsList[idx].num = this.goodsList[idx].num.replace(/[^1-9]/g,'')
             },
             selectAll(){
-                for(var i in this.goodsList){
-                    console.log(this.goodsList[i])
-                    this.$set(this.goodsList[i],'isSelect',true)
-                    
+                if(!this.selectAllGoods){
+                    for(var i in this.goodsList){
+                       this.$set(this.goodsList[i],'isSelect',true)
+                    }
+                }else{
+                    for(var i in this.goodsList){
+                       this.$set(this.goodsList[i],'isSelect',false)
+                    }
                 }
+                
+                   
+
             }
             
 

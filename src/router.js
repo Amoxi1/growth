@@ -6,6 +6,9 @@ Vue.use(VueRouter)
 export default new VueRouter({
     routes:[{
         path:"/",
+        component:()=>import('./page/login/index.vue')
+    },{
+        path:"/person",
         component:Person
     },{
         path:"/info",

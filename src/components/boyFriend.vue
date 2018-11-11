@@ -24,7 +24,7 @@
     import nowMonth,{getNowWeek,text} from "./test.js"
     export default{
         data(){
-            return{text}
+            return {text}
         },
         name:"boyFriend",
         props:['boyFriend'],

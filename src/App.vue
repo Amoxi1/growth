@@ -3,18 +3,18 @@
    <el-row class='tac' :gutter="20">
       <el-col :span="4">
         <el-menu
-          default-active="2"
+          default-active="1"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
           class="el-menu-vertical-demo">
           <router-link to="/">
-            <el-submenu index="1">
+            <el-menu-item index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>test</span>
+                <span>login</span>
               </template>
-            </el-submenu>
+            </el-menu-item>
           </router-link>
           <router-link to="/info">
           <el-menu-item index="2">
@@ -44,6 +44,12 @@
             <el-menu-item index="6">
               <i class="el-icon-menu"></i>
               <span slot="title">todoList</span>
+            </el-menu-item>
+          </router-link>
+          <router-link to="/person">
+            <el-menu-item index="7">
+              <i class="el-icon-menu"></i>
+              <span slot="title">person</span>
             </el-menu-item>
           </router-link>
         </el-menu>
