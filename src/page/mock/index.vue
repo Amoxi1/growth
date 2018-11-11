@@ -4,13 +4,23 @@
     {{person.name}}
 
     {{isShow?person.age:'保密'}}
+
+    <hr>
+    <Hello> 
+        <div slot="up">hhh </div>xiaoli
+        <div slot="down">kkk </div>
+    </Hello>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Hello from './Hello'
 
 export default {
+    components:{
+        Hello
+    },
     data(){
         return {
           person:{
