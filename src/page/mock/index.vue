@@ -10,12 +10,18 @@
         <div slot="up">hhh </div>xiaoli
         <div slot="down">kkk </div>
     </Hello>
+
+    <hr>
+    {{add(1,1)}}==2
+    {{add(2)}}=3
+    {{add()}}=3
     </div>
 </template>
 
 <script>
 import axios from 'axios'
 import Hello from './Hello'
+import {add} from './sum.js'
 
 export default {
     components:{
@@ -34,6 +40,7 @@ export default {
         this.getName()
     },
     methods:{
+        add,
         getName(){
           axios.get('/getName').then((res)=>{
               //console.log(res)
@@ -54,6 +61,7 @@ export default {
               })
           })
         },
+        
        
     }
 }

@@ -14,26 +14,45 @@
 </template>
 <script>
 import List from './list'
+import store from './store.js'
 export default {
     components:{
         List
     },
+    created(){
+        // this.getTodoList()
+    },
     data(){
         return {
-            todos:[{title:"帮媳妇洗衣服",isFinished:false}],
-            done:[],
+            todos:store.fetch(),
             msg:undefined,
-           
+            nowTime:undefined
+        }
+    },
+    watch:{
+        todos:{
+            handler:function(todos){
+               store.save(todos)
+            },
+            deep:true
         }
     },
     methods:{
+        // getTodoList(){
+        //     this.todos=JSON.parse(window.localStorage.getItem('todos'))||[]
+        //     console.log(this.todos)
+        // },
         additions(){
             if(this.msg){
                 this.todos.push({title:this.msg,isFinished:false})
+                //window.localStorage.setItem('todos',JSON.stringify(this.todos))
                 this.msg=''
             }else{
                 alert('输入不可为空')
             }         
+        },
+        getNowTime(){
+            this.nowTime = new Date().getSeconds()
         }
     }
 }
