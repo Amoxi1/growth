@@ -69,11 +69,16 @@
                 <el-button @click="editGoodsDialogVisible = false">取 消</el-button>
             </el-form>
        </el-dialog>
+       <List2></List2>
    </div>
 </template>
 <script>
     import axios from 'axios'
+    import List2 from './List2.vue'
     export default{
+        components:{
+            List2
+        },
         data(){
             return {
                 tableData:[],
@@ -82,6 +87,7 @@
                 currentData:{}
             }
         },
+        
         created(){
             this.getTableDate()
         },
