@@ -1,7 +1,7 @@
 import Mock from 'mockjs'
 
 Mock.setup({
-    timeout: '200-600'
+    timeout: '200-700'
 })
 Mock.mock('/getName', ()=>{
     return {
